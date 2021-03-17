@@ -1,0 +1,29 @@
+First, we open the library data.table.  Then FileUrl is downloaded in my environment. It gets displayed in the environment window under values:
+  fileurl by https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+  features with chr [1:561] "tbodyAcc-mean()-x", "tbodyAcc-mean()-y", "tbodyAcc-mean()-z"
+  
+Second, the creation of two data frames consists of test and train types: 
+  data.test with 2497 obsvervations of 563 variables
+  data.test.actiion with 2497 obsvervations of 1 variable
+  data.test.subject with 2497 obsvervations of 1 variable
+  data.test.x with 2497 obsvervations of 561 variables
+  data.train with 7352 observations of 563 variables
+  data.train.actiion with 7352 observations of 1 variable
+  data.train.subject with 7352 observations of 1 variable
+  data.train.x with 7352 observations of 5611 variables
+
+Third, a main frame is created by merging the test and train data:
+  data.main with 10299 observations
+
+Fourth, the mean and std. deviation get displayed by values:
+  mean_std.select with int[1:79] 1 2 3 4 5 6 41 42 43 44 ...
+  
+Fifth, descriptive names are given for each action:
+  actiion.lables chr[1:6] "WALKING", "WALKING_UPSTAIRS", "WALKING_DO" ... 
+
+Sixth, new names are given to actions with labels:
+  name.new with chr[1:81] "subject" "actiion" "TimeDomain_" ... 
+  
+Seventh, a new and independent dataset named data.tidy is created. The average of each action and subject is also included. 
+  data.tidy with 180 observations of 81 variables. 
+  
